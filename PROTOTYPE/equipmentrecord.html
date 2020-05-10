@@ -1,0 +1,130 @@
+<!-- EQUIPMENTRECORD.HTML -->
+<!-- AYLA DUFFTON, 1005377 -->
+<!-- MAY 2020 -->
+
+<!-- WARNING: NEED ../ BEFORE ALL PATHS TO EXTERNAL FILES ONCE SITE IS LIVE?? -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Job Scheduler</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <!-- CSS STYLESHEETS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- BOOTSTRAP SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/93c100a9bd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section class="colored-section" id="navigation">
+    <div class="container-fluid">
+
+      <!-- NAV BAR -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/trac-black-background-small.jpg" width="224" height="133.6" alt="trac-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class=" nav-dark nav-link" href="jobs.html">Jobs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="technicians.html">Technicians</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="equipment.html">Equipment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+  </section>
+
+  <section class="white-section" id="title-login">
+    <div class="container-fluid">
+
+      <!-- lOGO -->
+      <div class="row">
+        <!-- <div class="col-6"> -->
+        <img class="title-image" src="images\trac-large.jpg" alt="trac-logo">
+        <!-- </div> -->
+      </div>
+
+      <!-- TITLE -->
+      <div class="row">
+        <h1 class="big-heading">Job Scheduler - Equipment Record</h1>
+      </div>
+
+      <!-- FORM SECTION -->
+      <form>
+        <div class="form-row form-alignment">
+          <div class="form-group col-md-4 equipment-column">
+            <label for="inputEquipment">Equipment:</label>
+            <input type="text" class="form-control" id="inputEquipment">
+            <label for="inputCurrentJob">Current Job:</label>
+            <input type="text" class="form-control" id="inputCurrentJob">
+            <!-- <label for="inputStreet">Post Code:</label>
+            <input type="text" class="form-control" id="input-postcode"> -->
+          </div>
+
+          <div class="form-group col-md-4 status-column">
+            <label for="inputStatus">Status:</label>
+            <input type="text" class="form-control" id="inputStatus">
+            <label for="inputNotes">Notes:</label>
+            <input type="text" class="form-control" id="inputNotes">
+          </div>
+
+        </div>
+      </form>
+
+      <!-- BUTTON SECTION -->
+      <div class="row">
+        <div class="col-auto button-row">
+          <a href="equipment.html"><button type="submit" class="btn btn-dark delete-button">Delete</button></a>
+          <a href="equipment.html"><button type="submit" class="btn btn-dark save-button">Save</button></a>
+          <!-- apply the lines below once the database is setup
+          <button type="submit" class="btn btn-dark delete-button">Delete</button>
+          <button type="submit" class="btn btn-dark save-button">Save</button> -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="colored-section" id="footer">
+    <div class="container-fluid">
+      <a href="https://www.tracoilandgas.com" <i class=" footer-icons fas fa-globe"></i></a>
+      <a href="https://twitter.com/trac_oilandgas" <i class="footer-icons fab fa-twitter"></i></a>
+      <a href="https://en-gb.facebook.com/tracoilandgas/" <i class="footer-icons fab fa-facebook-f"></i></a>
+      <a href="mailto:oilandgas@trac.com" <i class="footer-icons fas fa-envelope"></i></a>
+      <p class="footer-icons copyright">© Copyright 2020 TRAC Oil & Gas Ltd</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/index.js" charset="utf-8"></script>
+</body>
+
+</html>
