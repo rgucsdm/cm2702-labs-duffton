@@ -1,0 +1,51 @@
+<!-- TECHNICIANRECORD.HTML -->
+<!-- AYLA DUFFTON, 1005377 -->
+<!-- MAY 2020 -->
+
+<%- include("partials/header"); -%>
+
+  <%- include("partials/logoAndTitle"); -%>
+
+      <!-- FORM SECTION -->
+      <form action="/submittechnician" method="post">
+        <div class="form-row form-alignment">
+          <div class="form-group col-md-4 job-column">
+            <label for="inputName">Name:</label>
+            <input type="text" class="form-control" name="inputName">
+            <label for="inputStreet">Street:</label>
+            <input type="text" class="form-control" name="inputStreet">
+            <label for="inputPostcode">Postcode:</label>
+            <input type="text" class="form-control" name="inputPostcode">
+          </div>
+
+          <div class="form-group col-md-4 duration-column">
+            <label for="inputEmail">Email:</label>
+            <input type="email" class="form-control" name="inputEmail">
+            <label for="inputTown">Town:</label>
+            <input type="text" class="form-control" name="inputTown">
+            <label for="inputAvailability">Availability:</label>
+            <input type="text" class="form-control" name="inputAvailability">
+          </div>
+
+          <div class="form-group col-md-4 tech-column" form-alignment"">
+            <label for="inputPhone">Phone Number:</label>
+            <input type="number" class="form-control" name="inputPhone">
+            <label for="inputCounty">County:</label>
+            <input type="text" class="form-control" name="inputCounty">
+          <label for="inputQualification">Qualifications:</label>
+            <input type="text" class="form-control" name="inputQualification">
+          </div>
+        </div>
+
+        <!-- BUTTON SECTION -->
+        <div class="row">
+          <div class="col-auto button-row">
+          <button type="submit" class="btn btn-dark save-button">Save</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <%- include("partials/footer"); -%>

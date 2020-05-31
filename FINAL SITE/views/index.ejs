@@ -1,0 +1,27 @@
+<!-- INDEX.EJS -->
+<!-- AYLA DUFFTON, 1005377 -->
+<!-- MAY 2020 -->
+
+<%- include("partials/headerLogin"); -%>
+
+<%- include("partials/logoAndTitle"); -%>
+
+    <!-- LOGIN SECTION -->
+    <div class="row">
+      <form action="/" method="POST" class="login-form">
+        <div class="form-group">
+          <input type="text" name="userName" placeholder="Enter Username" class="form-control login-form-control" id="username">
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" placeholder="Enter Password" class="form-control login-form-control" id="password">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-dark btn-lg trac-button"><i class="fas fa-sign-in-alt"></i> Login</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<%- include("partials/footer"); -%>

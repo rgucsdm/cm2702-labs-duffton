@@ -1,0 +1,41 @@
+<!-- CREATEEQUIPMENT.EJS -->
+<!-- AYLA DUFFTON, 1005377 -->
+<!-- MAY 2020 -->
+
+<%- include("partials/header"); -%>
+
+  <%- include("partials/logoAndTitle"); -%>
+
+      <!-- FORM SECTION -->
+      <form action="/submitequipment" method="post">
+        <div class="form-row form-alignment">
+          <div class="form-group col-md-4 equipment-column">
+            <label for="inputEquipment">Equipment Number:</label>
+            <input type="number" class="form-control" name="inputEquipment">
+            <label for="inputCurrentJob">Current Job:</label>
+            <input type="text" class="form-control" name="inputCurrentJob">
+            <label for="inputNotes">Notes:</label>
+            <input type="text" class="form-control" name="inputNotes">
+          </div>
+
+          <div class="form-group col-md-4 status-column">
+            <label for="inputDescription">Description:</label>
+            <input type="text" class="form-control" name="inputDescription">
+            <label for="inputStatus">Status:</label>
+            <input type="text" class="form-control" name="inputStatus">
+
+          </div>
+        </div>
+
+        <!-- BUTTON SECTION -->
+        <div class="row">
+          <div class="col-auto button-row">
+            <button type="submit" class="btn btn-dark save-button">Save</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <%- include("partials/footer"); -%>

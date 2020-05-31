@@ -1,0 +1,114 @@
+<!-- SCHEDULER.EJS -->
+<!-- AYLA DUFFTON, 1005377 -->
+<!-- MAY 2020 -->
+
+<%- include("partials/header"); -%>
+
+<%- include("partials/logoAndTitle"); -%>
+
+<!-- CREATE, FILTER AND SEARCH SECTION -->
+<form action="/query" method="post">
+  <div class="form-row create-filter-search">
+    <div class="col-md-2 create-button-align">
+      <a href="<%= createPage %>"><button type="button" class="btn btn-dark jobs-create">Create</button></a>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <input type="text" class="form-control jobs-form" placeholder="Enter Filter">
+    </div>
+    <div class="col-md-2 col-sm-6 button-align">
+      <button type="submit" class="btn btn-dark jobs-form">Filter</button>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <input type="text" class="form-control jobs-form" name="searchQuery" placeholder="<%= searchMessage%>">
+    </div>
+    <div class="col-md-2 col-sm-6 button-align">
+      <button type="submit" class="btn btn-dark jobs-form">Search</button>
+      <input type="hidden" name="recordType" value="<%= subTitle %>"></input>
+    </div>
+  </div>
+</form>
+
+<!-- TABLE SECTION -->
+<div class="table-responsive table-section">
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"><%=tableHeaderA%></th>
+        <th scope="col"><%=tableHeaderB%></th>
+        <th scope="col"><%=tableHeaderC%></th>
+        <!-- <th scope="col">Job</th>
+            <th scope="col">Technicians</th>
+            <th scope="col">Location</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <% if (message === "Jobs") { %>
+      <% jobRecords.forEach(function(job){ %>
+      <form action="/jobrecord" method="post">
+      <tr>
+        <td class="edit-record"><button class="btn btn-dark edit-record-btn" type="submit" name="editJob" value="<%= job._id %>">Edit</button></td>
+        <td><%= job.jobNumber %></td>
+        <td><%= job.technicians %></td>
+        <td><%= job.town %></td>
+      </tr>
+      </form>
+      <% }); %>
+      <% } else if (message === "Technicians") { %>
+      <% technicianRecords.forEach(function(technician){ %>
+        <form action="/technicianrecord" method="post">
+      <tr>
+        <td class="edit-record"><button class="btn btn-dark edit-record-btn" type="submit" name="editTechnician" value="<%= technician._id %>">Edit</button></td>
+        <td><%= technician.name %></td>
+        <td><%= technician.availability %></td>
+        <td><%= technician.qualification %></td>
+      </tr>
+      </form>
+      <% }); %>
+      <% } else if (message === "Equipment") { %>
+      <% equipmentRecords.forEach(function(equipment){ %>
+        <form action="/equipmentrecord" method="post">
+      <tr>
+        <td class="edit-record"><button class="btn btn-dark edit-record-btn" type="submit" name="editEquipment" value="<%= equipment._id %>">Edit</button></td>
+        <td><%= equipment.equipmentNumber %></td>
+        <td><%= equipment.currentJob %></td>
+        <td><%= equipment.status %></td>
+      </tr>
+      </form>
+      <% }); %>
+      <% } else if (message === "JobQuery") { %>
+        <form action="/jobrecord" method="post">
+        <tr>
+          <td class="edit-record"><button class="btn btn-dark edit-record-btn" type="submit" name="editJob" value="<%= jobRecord._id %>">Edit</button></td>
+          <td><%= jobRecord.jobNumber %></td>
+          <td><%= jobRecord.technicians %></td>
+          <td><%= jobRecord.town %></td>
+        </tr>
+        </form>
+        <% } else if (message === "TechnicianQuery") { %>
+          <form action="/technicianrecord" method="post">
+          <tr>
+            <td class="edit-record"><button class="btn btn-dark edit-record-btn" type="submit" name="editTechnician" value="<%= technicianRecord._id %>">Edit</button></td>
+            <td><%= technicianRecord.name %></td>
+            <td><%= technicianRecord.availability %></td>
+            <td><%= technicianRecord.qualification %></td>
+          </tr>
+          </form>
+          <% } else if (message === "EquipmentQuery") { %>
+            <form action="/equipmentrecord" method="post">
+            <tr>
+              <td class="edit-record"><button class="btn btn-dark edit-record-btn" type="submit" name="editEquipment" value="<%= equipmentRecord._id %>">Edit</button></td>
+              <td><%= equipmentRecord.equipmentNumber %></td>
+              <td><%= equipmentRecord.currentJob %></td>
+              <td><%= equipmentRecord.status %></td>
+            </tr>
+            </form>
+            <% }; %>
+    </tbody>
+  </table>
+</div>
+
+</div>
+</section>
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,458 @@
+/* STYLES.CSS
+AYLA DUFFTON, 1005377
+MAY 2020 */
+
+/* FONT CODE */
+/* font-family: 'Sarabun', sans-serif; */
+body {
+  font-family: 'Sarabun', "Verdana", sans-serif;
+}
+
+p {
+  color: #8F8F8F;
+}
+
+/* HEADINGS */
+.big-heading {
+  font-family: 'Sarabun', "Verdana", sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.5;
+  margin: 2% auto;
+  text-align: center;
+}
+
+.big-heading.message {
+  margin: 0 auto 2%;
+}
+
+/* CONTAINER */
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/* SECTIONS */
+.colored-section {
+  background-color: #181717;
+  color: #ffdb30;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+/* NAVIGATION BAR */
+#navigation .container-fluid {
+  padding: 3% 15%;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffdb30;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: #ffdb30;
+  color: #ffdb30;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 219, 48, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* TITLE & LOGIN SECTION */
+#title-login .container-fluid {
+  margin: auto;
+}
+
+/* TITLE IMAGE */
+.title-image {
+  margin: auto;
+  width: 40%;
+}
+
+/* LOGIN FORM */
+.login-form {
+  margin: auto;
+  text-align: center;
+  width: 40%;
+}
+
+.login-form-control {
+  margin: auto;
+  text-align: center;
+  width: 50%;
+}
+
+/* BUTTONS */
+.btn-dark:hover {
+  background-color: #ffdb30;
+  color: #181717;
+}
+
+.trac-button {
+  margin: auto;
+  width: 40%;
+}
+
+.menu-button {
+  margin: auto;
+  width: 40%;
+}
+
+/* .delete-button {
+  margin-top: 2%;
+} */
+
+.delete-button:hover {
+  background-color: #d91507;
+  color: #fff;
+  display: inline-block;
+}
+
+.save-button {
+  margin-bottom: 2%;
+}
+
+.col-auto.button-row.save-delete {
+  text-align: center;
+  width: 50%;
+}
+
+.edit-record {
+  text-align: center;
+  width: 7%;
+}
+
+.edit-record-btn:hover {
+  background-color: #fff;
+  color: #181717;
+}
+
+/* MENU SECTION */
+.menu {
+  margin: 0.5% auto 0.5%;
+  text-align: center;
+  width: 40%;
+}
+
+/* FILTER, SEARCH SECTION */
+.filter-search-form {
+  margin: auto;
+  width: 60%;
+}
+
+.filter-search-form-align {
+  margin-left: auto;
+}
+
+.filter-search-button:hover {
+  background-color: #ffdb30;
+  color: #181717;
+}
+
+.search-button-align {
+  margin-right: auto;
+}
+
+/* TABLE SECTION */
+.table-section {
+  margin-top: 2%;
+}
+
+tr {
+  background-color: #ffdb30;
+}
+
+/* FORM RECORD SECTION */
+.job-column {
+  margin-left: auto;
+}
+
+.tech-column {
+  margin-right: auto;
+}
+
+.button-row {
+  margin: auto;
+}
+
+/* EQUIPMENT RECORD SECTION */
+.equipment-column {
+  margin-left: auto;
+}
+
+.status-column {
+  margin-right: auto;
+}
+
+/* MAP IMAGE SECTION */
+.map-image {
+  margin: 3% auto;
+  width: 50%;
+}
+
+/* FOOTER SECTION */
+#footer .container-fluid {
+  padding: 3% 15%;
+  text-align: center;
+}
+
+.footer-icons {
+  color: #ffdb30;
+  margin: 20px 10px;
+}
+
+.footer-icons:hover {
+  color: #fff;
+}
+
+.footer-text {
+  color: #ffdb30;
+  margin: 20px 10px;
+}
+
+.copyright {
+  font-weight: bold;
+}
+
+
+/* MEDIA QUERY SECTION */
+/* Extra small devices (portrait phones, less than 576px) No media query for `xs` since this is the default in Bootstrap */
+@media (max-width: 575px) {
+
+  /* NAV BAR */
+  button.navbar-toggler {
+    margin: auto;
+  }
+
+  a.navbar-brand {
+    margin: auto;
+    text-align: center;
+  }
+
+  /* .nav-logo {
+    height: 60%;
+    width: 60%;
+  } */
+
+  .navbar {
+    padding: 0;
+  }
+
+  a.nav-link {
+    text-align: center;
+  }
+
+  /* LOGO */
+  .title-image {
+    width: 90%;
+  }
+
+  /* TITLE */
+  .big-heading {
+    font-size: 1.5rem;
+  }
+
+  /* INDEX PAGE LOGIN */
+  .login-form {
+    margin: auto;
+    width: 70%;
+  }
+
+  .login-form-control {
+    width: 80%;
+  }
+
+  button .container-fluid {
+    margin: auto;
+    width: 150%;
+  }
+
+  .trac-button {
+    width: 50%;
+  }
+
+  /* MAIN PAGE MENU BUTTONS */
+  .menu {
+    width: 90%;
+  }
+
+  .menu-button {
+    width: 60%;
+  }
+
+  /* JOB RECORD PAGE MAP SECTION */
+  .map-image {
+    width: 90%;
+  }
+
+  /* JOBS PAGE FIELDS AND BUTTONS */
+  .jobs-form {
+    margin-bottom: 1.5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5%;
+    width: 50%;
+  }
+
+  .jobs-create {
+    margin-bottom: 1.5%;
+    width: 50%;
+  }
+
+  .form-row {
+    text-align: center;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+  /* NAV BAR */
+  button.navbar-toggler {
+    margin: 1% 1%;
+  }
+
+  a.nav-link {
+    text-align: center;
+  }
+
+  /* LOGO */
+  .title-image {
+    width: 60%;
+  }
+
+  /* TITLE */
+  .big-heading {
+    font-size: 1.5rem;
+  }
+
+  /* INDEX PAGE LOGIN */
+  .login-form-control {
+    width: 80%;
+  }
+
+  .trac-button {
+    width: 70%;
+  }
+
+  /* MAIN PAGE MENU BUTTONS */
+  .menu {
+    width: 90%;
+  }
+
+  .menu-button {
+    width: 50%;
+  }
+
+  /* JOB RECORD PAGE MAP SECTION */
+  .map-image {
+    width: 80%;
+  }
+
+  /* JOBS PAGE FIELDS AND BUTTONS */
+  .jobs-form {
+    margin-bottom: 3%;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+
+  .jobs-create {
+    margin-bottom: 3%;
+    margin-left: 42%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  /* NAV BAR */
+  button.navbar-toggler {
+    margin: 1% 1%;
+  }
+
+  a.nav-link {
+    text-align: center;
+  }
+
+  /* LOGO */
+  .title-image {
+    width: 50%;
+  }
+
+  /* INDEX PAGE LOGIN */
+  .login-form-control {
+    width: 60%;
+  }
+
+  .trac-button {
+    width: 50%;
+  }
+
+  /* JOBS PAGE FIELDS AND BUTTONS */
+  .jobs-create {
+    margin-left: 5%;
+  }
+
+  .jobs-form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+  /* LOGO */
+  .title-image {
+    width: 50%;
+  }
+
+  /* MAIN PAGE MENU BUTTONS */
+  .menu {
+    width: 90%;
+  }
+
+  .menu-button {
+    width: 40%;
+  }
+
+  /* JOBS PAGE FIELDS AND BUTTONS */
+  .create-filter-search {
+    text-align: center;
+  }
+
+  .button-align {
+    text-align: left;
+  }
+
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    /* JOBS PAGE FIELDS AND BUTTONS */
+    .create-filter-search {
+      text-align: center;
+    }
+
+    .button-align {
+      text-align: left;
+    }
+  }

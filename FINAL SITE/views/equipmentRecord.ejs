@@ -1,0 +1,48 @@
+<!-- EQUIPMENTRECORD.EJS -->
+<!-- AYLA DUFFTON, 1005377 -->
+<!-- MAY 2020 -->
+
+<%- include("partials/header"); -%>
+
+  <%- include("partials/logoAndTitle"); -%>
+
+      <!-- FORM SECTION -->
+      <form action="/recordupdate" method="post">
+        <div class="form-row form-alignment">
+          <div class="form-group col-md-4 equipment-column">
+            <label for="updateEquipment">Equipment Number:</label>
+            <input type="number" class="form-control" name="updateEquipment" placeholder="<%= equipmentNumber %>">
+            <label for="updateCurrentJob">Current Job:</label>
+            <input type="number" class="form-control" name="updateCurrentJob" placeholder="<%= currentJob %>">
+            <label for="updateNotes">Notes:</label>
+            <input type="text" class="form-control" name="updateNotes" placeholder="<%= notes %>">
+          </div>
+
+          <div class="form-group col-md-4 status-column">
+            <label for="updateDescription">Description:</label>
+            <input type="text" class="form-control" name="updateDescription" placeholder="<%= description %>">
+            <label for="updateStatus">Status:</label>
+            <input type="text" class="form-control" name="updateStatus" placeholder="<%= status %>">
+          </div>
+        </div>
+
+        <div class="col-auto button-row save-delete">
+        <button type="submit" class="btn btn-dark save-button" name="recordType" value="Equipment Record">Save</button>
+        <input type="hidden" name="equipmentId" value="<%= equipmentId %>"></input>
+        </div>
+      </form>
+
+      <!-- BUTTON SECTION -->
+      <div class="row">
+        <div class="col-auto button-row save-delete">
+          <form class="delete-button" action="/recorddelete" method="post">
+            <button type="submit" class="btn btn-dark delete-button" name="recordType" value="Equipment Record">Delete</button>
+            <input type="hidden" name="equipmentId" value="<%= equipmentId %>"></input>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <%- include("partials/footer"); -%>

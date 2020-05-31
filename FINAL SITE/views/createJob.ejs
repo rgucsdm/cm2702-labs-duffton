@@ -1,0 +1,47 @@
+<!-- CREATEJOB.EJS -->
+<!-- AYLA DUFFTON, 1005377 -->
+<!-- MAY 2020 -->
+
+<%- include("partials/header"); -%>
+
+  <%- include("partials/logoAndTitle"); -%>
+
+      <!-- FORM SECTION -->
+      <form action="/submitjob" method="post">
+        <div class="form-row form-alignment">
+          <div class="form-group col-md-4 job-column">
+            <label for="inputJob">Job Number:</label>
+            <input type="number" class="form-control" name="inputJob">
+            <label for="inputStreet">Street:</label>
+            <input type="text" class="form-control" name="inputStreet">
+            <label for="inputPostcode">Post Code:</label>
+            <input type="text" class="form-control" name="inputPostcode">
+          </div>
+
+          <div class="form-group col-md-4 duration-column">
+            <label for="inputDuration">Duration (in weeks):</label>
+            <input type="number" class="form-control" name="inputDuration">
+            <label for="inputTown">Town:</label>
+            <input type="text" class="form-control" name="inputTown">
+          </div>
+
+          <div class="form-group col-md-4 tech-column" form-alignment"">
+            <label for="inputTech">Technicians:</label>
+            <input type="text" class="form-control" name="inputTech">
+            <label for="inputCounty">County:</label>
+            <input type="text" class="form-control" name="inputCounty">
+          </div>
+        </div>
+
+        <!-- BUTTON SECTION -->
+        <div class="row">
+          <div class="col-auto button-row">
+          <button type="submit" class="btn btn-dark save-button">Save</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <%- include("partials/footer"); -%>

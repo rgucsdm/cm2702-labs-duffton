@@ -1,0 +1,61 @@
+<!-- JOBRECORD.EJS -->
+<!-- AYLA DUFFTON, 1005377 -->
+<!-- MAY 2020 -->
+
+<%- include("partials/header"); -%>
+
+  <%- include("partials/logoAndTitle"); -%>
+
+      <!-- FORM SECTION -->
+      <form action="/recordupdate" method="post">
+        <div class="form-row form-alignment">
+          <div class="form-group col-md-4 job-column">
+            <label for="updateJob">Job Number:</label>
+            <input type="number" class="form-control" name="updateJob" placeholder="<%= jobNumber %>">
+            <label for="updateStreet">Street:</label>
+            <input type="text" class="form-control" name="updateStreet" placeholder="<%= street %>">
+            <label for="updatePostcode">Postcode:</label>
+            <input type="text" class="form-control" name="updatePostcode" placeholder="<%= postcode %>">
+          </div>
+
+          <div class="form-group col-md-4 duration-column">
+            <label for="updateDuration">Duration:</label>
+            <input type="number" class="form-control" name="updateDuration" placeholder="<%= duration %>">
+            <label for="updateTown">Town:</label>
+            <input type="text" class="form-control" name="updateTown" placeholder="<%= town %>">
+          </div>
+
+          <div class="form-group col-md-4 tech-column" form-alignment"">
+            <label for="updateTech">Technicians:</label>
+            <input type="text" class="form-control" name="updateTech" placeholder="<%= technicians %>">
+            <label for="updateCounty">County:</label>
+            <input type="text" class="form-control" name="updateCounty" placeholder="<%= county %>">
+          </div>
+        </div>
+
+          <div class="col-auto button-row save-delete">
+          <button type="submit" class="btn btn-dark save-button" name="recordType" value="Job Record">Save</button>
+          <input type="hidden" name="jobId" value="<%= jobId %>"></input>
+          </div>
+      </form>
+
+      <!-- BUTTON SECTION -->
+      <div class="row">
+        <div class="col-auto button-row save-delete">
+          <form class="delete-button" action="/recorddelete" method="post">
+            <button type="submit" class="btn btn-dark delete-button" name="recordType" value="Job Record">Delete</button>
+            <input type="hidden" name="jobId" value="<%= jobId %>"></input>
+          </form>
+        </div>
+      </div>
+
+      <!-- MAP SECTION -->
+      <div class="row">
+        <img class="map-image" src="<%=mapUrl%>" alt="map-placeholder">
+        <!-- <img class="map-image" src="images/rivendell.jpg" alt="map-placeholder"> -->
+      </div>
+
+    </div>
+  </section>
+
+  <%- include("partials/footer"); -%>

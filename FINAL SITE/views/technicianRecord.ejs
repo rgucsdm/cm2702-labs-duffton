@@ -1,0 +1,58 @@
+<!-- TECHNICIANRECORD.HTML -->
+<!-- AYLA DUFFTON, 1005377 -->
+<!-- MAY 2020 -->
+
+<%- include("partials/header"); -%>
+
+  <%- include("partials/logoAndTitle"); -%>
+
+      <!-- FORM SECTION -->
+      <form action="/recordupdate" method="post">
+        <div class="form-row form-alignment">
+          <div class="form-group col-md-4 job-column">
+            <label for="updateName">Name:</label>
+            <input type="text" class="form-control" name="updateName" placeholder="<%= name %>">
+            <label for="updateStreet">Street:</label>
+            <input type="text" class="form-control" name="updateStreet" placeholder="<%= street %>">
+            <label for="updatePostcode">Postcode:</label>
+            <input type="text" class="form-control" name="updatePostcode" placeholder="<%= postcode %>">
+          </div>
+
+          <div class="form-group col-md-4 duration-column">
+            <label for="updateEmail">Email:</label>
+            <input type="text" class="form-control" name="updateEmail" placeholder="<%= email %>">
+            <label for="updateTown">Town:</label>
+            <input type="text" class="form-control" name="updateTown" placeholder="<%= town %>">
+            <label for="updateAvailability">Availability:</label>
+            <input type="text" class="form-control" name="updateAvailability" placeholder="<%= availability %>">
+          </div>
+
+          <div class="form-group col-md-4 tech-column" form-alignment"">
+            <label for="updatePhone">Phone:</label>
+            <input type="text" class="form-control" name="updatePhone" placeholder="<%= phone %>">
+            <label for="updateCounty">County:</label>
+            <input type="text" class="form-control" name="updateCounty" placeholder="<%= county %>">
+          <label for="updateQualification">Qualifications:</label>
+            <input type="text" class="form-control" name="updateQualification" placeholder="<%= qualification %>">
+          </div>
+        </div>
+        <div class="col-auto button-row save-delete">
+        <button type="submit" class="btn btn-dark save-button" name="recordType" value="Technician Record">Save</button>
+        <input type="hidden" name="technicianId" value="<%= technicianId %>"></input>
+        </div>
+      </form>
+
+      <!-- BUTTON SECTION -->
+      <div class="row">
+        <div class="col-auto button-row save-delete">
+          <form class="delete-button" action="/recorddelete" method="post">
+            <button type="submit" class="btn btn-dark delete-button" name="recordType" value="Technician Record">Delete</button>
+            <input type="hidden" name="technicianId" value="<%= technicianId %>"></input>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <%- include("partials/footer"); -%>
